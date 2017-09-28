@@ -20,22 +20,21 @@ namespace Zarodolgozat
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        readonly MainViewModel _vm;
 
-        private void LogInButtonClick(object sender, RoutedEventArgs e)
+        public MainWindow()
         {
             var logInWindow = new LogInWindow();
             logInWindow.ShowDialog();
-        }
+            InitializeComponent();
 
-        private void SignInButtonClick(object sender, RoutedEventArgs e)
-        {
-            var signInWindow = new SignInWindow();
-            signInWindow.ShowDialog();
-        }
+            _vm = new MainViewModel
+            {
+                User = logInWindow.ViewModel.AuthenticatedUser
+            };
 
+            DataContext = _vm;
+
+        }
     }
 }

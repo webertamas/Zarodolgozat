@@ -55,9 +55,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="SignInWindow.xaml.cs">
-      <DependentUpon>SignInWindow.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Agreement.cs" />
+    <Compile Include="BaseModel.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="Company.cs" />
+    <Compile Include="DailyLog.cs" />
+    <Compile Include="LoginViewModel.cs" />
+    <Compile Include="MainViewModel.cs" />
+    <Compile Include="User.cs" />
     <Page Include="LogInWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -77,10 +82,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="SignInWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -108,6 +109,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Zarodolgozat.Dal\Zarodolgozat.Dal.csproj">
+      <Project>{7ec5e8a8-db28-4909-8114-3b9587c46026}</Project>
+      <Name>Zarodolgozat.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zarodolgozat.Tests\Zarodolgozat.Tests.csproj">
+      <Project>{f4cfcceb-31a4-41a2-ab96-c0f92fd6df6d}</Project>
+      <Name>Zarodolgozat.Tests</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

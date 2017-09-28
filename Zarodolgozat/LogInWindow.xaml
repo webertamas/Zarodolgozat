@@ -5,14 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zarodolgozat"
         mc:Ignorable="d"
-        Title="LogInWindow" Height="300" Width="324">
+        Title="LogInWindow" Height="425" Width="490" Closing="OnClosing">
     <Grid>
-        <Label x:Name="label" Content="Kérjük jelentkezzen be!" HorizontalAlignment="Left" Margin="20,21,0,0" VerticalAlignment="Top" FontSize="22"/>
-        <Label x:Name="label1" Content="Felhasználónév:" HorizontalAlignment="Left" Margin="40,111,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1_Copy" Content="Jelszó:" HorizontalAlignment="Left" Margin="40,156,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="userNameTextBox" HorizontalAlignment="Left" Height="26" Margin="155,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="125"/>
-        <Button x:Name="logInOkButton" Content="OK" HorizontalAlignment="Left" Margin="80,220,0,0" VerticalAlignment="Top" Width="160" Height="39" Click="LogInOkButtonClick"/>
-        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Height="26" Margin="155,156,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="125" PasswordChar="*"/>
+ 
+        <TextBox x:Name="userNameTextBox" HorizontalAlignment="Left" Height="26" Margin="229,177,0,0" TextWrapping="Wrap" Text="{Binding Username}" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="151"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Height="26" Margin="228,222,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="151" PasswordChar="*"/>
+        <Button Content="OK" HorizontalAlignment="Left" Margin="161,281,0,0" VerticalAlignment="Top" Width="159" Height="39" Click="LogInOkButtonClick"/>
+        <Button Content="Mégsem" HorizontalAlignment="Left" Margin="161,341,0,0" VerticalAlignment="Top" Width="159" Height="39" Click="AbortButton_Click"/>
+        <Label Content="Üdvözöljük az Elektronikus&#xA; Nyílvántartó rendszerben!" HorizontalAlignment="Center" Margin="10,0,5,0" VerticalAlignment="Top" FontSize="36"/>
+        <Label Content="Kérjük jelentkezzen be!" TextBlock.TextAlignment="Center" HorizontalAlignment="Center" Margin="125,128,103,0" VerticalAlignment="Top" FontSize="22" Width="254"/>
+        <Label Content="Felhasználónév:" HorizontalAlignment="Left" Margin="103,172,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Jelszó:" HorizontalAlignment="Left" Margin="103,217,0,0" VerticalAlignment="Top" FontSize="16"/>
 
     </Grid>
 </Window>

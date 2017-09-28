@@ -5,10 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zarodolgozat"
         mc:Ignorable="d"
-        Title="Elektronikus Nyílvántartó" Height="387" Width="489">
+        Title="Elektronikus Nyílvántartó" Height="461" Width="970">
     <Grid>
-        <Label x:Name="welcomeLabel" Content="Üdvözöljük az Elektronikus&#xD;&#xA; Nyílvántartó rendszerben!" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <Button x:Name="logInButton" Content="Bejelentkezés" Margin="165,203,166,96" Click="LogInButtonClick" />
-        <Button x:Name="signInButton" Content="Regisztráció" Margin="165,278,166,21" Click="SignInButtonClick"/>
+        <Frame Content="Frame" HorizontalAlignment="Left" Height="420" Margin="161,0,0,0" VerticalAlignment="Top" Width="791"/>
+        <Button Content="Nyitólap" HorizontalAlignment="Left" Height="23" Margin="21,57,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Igénylések" HorizontalAlignment="Left" Height="23" Margin="21,87,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Napló" HorizontalAlignment="Left" Height="23" Margin="21,115,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Riportok" HorizontalAlignment="Left" Height="23" Margin="21,143,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Törzsadatok" HorizontalAlignment="Left" Height="23" Margin="21,171,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="23" Margin="21,199,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="23" Margin="21,227,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="23" Margin="21,255,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Kijelentkezés" HorizontalAlignment="Left" Height="23" Margin="21,283,0,0" VerticalAlignment="Top" Width="120"/>
+
+
     </Grid>
+
 </Window>
