@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Zarodolgozat.Dal
 {
-    class AgreementDbModel
+    public class AgreementDbModel
     {
+        public UserDbModel User { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public ICollection<ClientDbModel> Clients { get; set; }
+        public ClientDbModel Client { get; set; }
     }
 }

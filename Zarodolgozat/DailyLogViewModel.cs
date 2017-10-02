@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zarodolgozat
 {
-    public class Agreement:BaseModel
+    class DailyLogViewModel
     {
-        public string StartDate { get; set; }
-        public string EndDate { get; set; }
-
     }
 }

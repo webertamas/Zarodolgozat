@@ -21,14 +21,31 @@ namespace Zarodolgozat.Dal
                 LastName ="Kiss",
                 BirthName ="Kiss István",
                 BirthPlace ="Budapest",
-                BirthDate ="1960/01/01",
+                BirthDate = DateTime.Parse("1960/01/01"),
                 MothersLastName ="Ágnes",
                 MothersFirstName ="Szabó",
                 SSN =111222333,
                 HAZIPCode =1106,
                 HALocality ="Budapest",
                 HAStreet ="Jászberényi út",
-                HANumber ="47/E" }
+                HANumber ="47/E"
+            }
         };
+        public List<CompanyDbModel> Companies { get; } = new List<CompanyDbModel>();
+
+        public List<AgreementDbModel> Agreements { get; }
+
+        public Context()
+        {
+            Agreements = new List<AgreementDbModel>
+            {
+                new AgreementDbModel
+                {
+                    StartDate=DateTime.Now,
+                    EndDate=DateTime.Now,
+                    Clients =new List<ClientDbModel> {Clients[0] }
+                }
+            };
+        }
     }
 }

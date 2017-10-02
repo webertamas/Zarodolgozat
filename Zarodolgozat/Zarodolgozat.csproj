@@ -56,14 +56,46 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Agreement.cs" />
+    <Compile Include="AgreementViewModel.cs" />
+    <Compile Include="AgreementWindow.xaml.cs">
+      <DependentUpon>AgreementWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BaseModel.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="ClientFormViewModel.cs" />
+    <Compile Include="ClientFormWindow.xaml.cs">
+      <DependentUpon>ClientFormWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClientView.xaml.cs">
+      <DependentUpon>ClientView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Company.cs" />
-    <Compile Include="DailyLog.cs" />
+    <Compile Include="CompanyFormViewModel.cs" />
+    <Compile Include="CompanyFormWindow.xaml.cs">
+      <DependentUpon>CompanyFormWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DailyLogViewModel.cs" />
     <Compile Include="LoginViewModel.cs" />
     <Compile Include="MainViewModel.cs" />
+    <Compile Include="Statistics.cs" />
     <Compile Include="User.cs" />
-    <Page Include="LogInWindow.xaml">
+    <Page Include="AgreementWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClientFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClientView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CompanyFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LogInView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -75,8 +107,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="LogInWindow.xaml.cs">
-      <DependentUpon>LogInWindow.xaml</DependentUpon>
+    <Compile Include="LogInView.xaml.cs">
+      <DependentUpon>LogInView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

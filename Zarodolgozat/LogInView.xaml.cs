@@ -17,16 +17,18 @@ namespace Zarodolgozat
     /// <summary>
     /// Interaction logic for LogInWindow.xaml
     /// </summary>
-    public partial class LogInWindow : Window
+    public partial class LogInView : Window
     {
         public LoginViewModel ViewModel { get; }
         public User LogInUser { get; internal set; }
 
-        public LogInWindow()
+        readonly bool _onLogout;
+        public LogInView(bool onLogout=false)
         {
             InitializeComponent();
             ViewModel = new LoginViewModel();
             DataContext = ViewModel;
+            _onLogout = onLogout;
         }
 
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zarodolgozat
 {
-    class DailyLog
+    class Statistics
     {
     }
 }

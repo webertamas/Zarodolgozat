@@ -12,7 +12,7 @@ namespace Zarodolgozat.Dal
         public string LastName { get; set; }
         public string BirthName { get; set; }
         //TODO
-        public string BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
 
         public string BirthPlace { get; set; }
         public int SSN { get; set; }

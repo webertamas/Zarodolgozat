@@ -1,4 +1,4 @@
-﻿<Window x:Class="Zarodolgozat.LogInWindow"
+﻿<Window x:Class="Zarodolgozat.LogInView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="LogInWindow" Height="425" Width="490" Closing="OnClosing">
     <Grid>
- 
+
         <TextBox x:Name="userNameTextBox" HorizontalAlignment="Left" Height="26" Margin="229,177,0,0" TextWrapping="Wrap" Text="{Binding Username}" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="151"/>
         <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Height="26" Margin="228,222,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="151" PasswordChar="*"/>
         <Button Content="OK" HorizontalAlignment="Left" Margin="161,281,0,0" VerticalAlignment="Top" Width="159" Height="39" Click="LogInOkButtonClick"/>
         <Button Content="Mégsem" HorizontalAlignment="Left" Margin="161,341,0,0" VerticalAlignment="Top" Width="159" Height="39" Click="AbortButton_Click"/>
-        <Label Content="Üdvözöljük az Elektronikus&#xA; Nyílvántartó rendszerben!" HorizontalAlignment="Center" Margin="10,0,5,0" VerticalAlignment="Top" FontSize="36"/>
-        <Label Content="Kérjük jelentkezzen be!" TextBlock.TextAlignment="Center" HorizontalAlignment="Center" Margin="125,128,103,0" VerticalAlignment="Top" FontSize="22" Width="254"/>
+        <Label Content="Üdvözöljük az Elektronikus&#xA; Nyílvántartó rendszerben!" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10,0" VerticalAlignment="Top" FontSize="36" Height="123" Width="462"/>
+        <Label Content="Kérjük jelentkezzen be!" HorizontalContentAlignment="Center" TextBlock.TextAlignment="Center" HorizontalAlignment="Center" Margin="103,128,103,0" VerticalAlignment="Top" FontSize="22" Width="276"/>
         <Label Content="Felhasználónév:" HorizontalAlignment="Left" Margin="103,172,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="Jelszó:" HorizontalAlignment="Left" Margin="103,217,0,0" VerticalAlignment="Top" FontSize="16"/>
 

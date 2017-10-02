@@ -8,15 +8,16 @@
         Title="Elektronikus Nyílvántartó" Height="461" Width="970">
     <Grid>
         <Frame Content="Frame" HorizontalAlignment="Left" Height="420" Margin="161,0,0,0" VerticalAlignment="Top" Width="791"/>
-        <Button Content="Nyitólap" HorizontalAlignment="Left" Height="23" Margin="21,57,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Igénylések" HorizontalAlignment="Left" Height="23" Margin="21,87,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Napló" HorizontalAlignment="Left" Height="23" Margin="21,115,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Riportok" HorizontalAlignment="Left" Height="23" Margin="21,143,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Törzsadatok" HorizontalAlignment="Left" Height="23" Margin="21,171,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="23" Margin="21,199,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="23" Margin="21,227,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="23" Margin="21,255,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Kijelentkezés" HorizontalAlignment="Left" Height="23" Margin="21,283,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Nyitólap" HorizontalAlignment="Left" Height="23" Margin="21,166,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Igénylések" HorizontalAlignment="Left" Height="23" Margin="21,196,0,0" VerticalAlignment="Top" Width="120" Click="AgreementButton_Click"/>
+        <Button Content="Napló" HorizontalAlignment="Left" Height="23" Margin="21,224,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Riportok" HorizontalAlignment="Left" Height="23" Margin="21,252,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Törzsadatok" HorizontalAlignment="Left" Height="23" Margin="21,280,0,0" VerticalAlignment="Top" Width="120" Click="ClientsButton_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="23" Margin="21,308,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="23" Margin="21,336,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="23" Margin="21,364,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Kijelentkezés" HorizontalAlignment="Left" Height="23" Margin="21,392,0,0" VerticalAlignment="Top" Width="120" Click="LogoutButton_click"/>
+        <Label Content="{Binding User.Username}" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="46" Margin="21,80,0,0" VerticalAlignment="Top" Width="120"/>
 
 
     </Grid>
