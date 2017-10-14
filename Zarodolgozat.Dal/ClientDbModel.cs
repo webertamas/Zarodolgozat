@@ -14,9 +14,7 @@ namespace Zarodolgozat.Dal
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string BirthName { get; set; }
-        //TODO
         public DateTime BirthDate { get; set; }
-
         public string BirthPlace { get; set; }
         public int SSN { get; set; }
         public string MothersFirstName { get; set; }

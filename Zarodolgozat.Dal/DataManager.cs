@@ -60,5 +60,11 @@ namespace Zarodolgozat.Dal
 
             }
         }
+        public IEnumerable<AgreementDbModel> GetAgrees()
+        {
+            return _seeds.Agreements; //.OrderBy(x => x.Client.BirthName);// .OrderBy(x => x.StartDate);
+        }
+
+        
     }
 }

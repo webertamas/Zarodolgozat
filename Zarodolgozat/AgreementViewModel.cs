@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -11,11 +12,18 @@ namespace Zarodolgozat
 {
     public class AgreementViewModel:BaseModel
     {
-        public List<Agreement> Agreements { get; }
-        public AgreementViewModel(Client client)
+        public ObservableCollection<Agreement> AgreementList { get; set; }
+        
+        public Client SelectClient { get; set; }
+
+        public AgreementViewModel()
         {
-            var ctx = new Context();
-            //Agreements = ctx.Agreements.Where(x => x.Client.BirthName == client.BirthName).Select(x => new Agreement { StartDate = x.StartDate.ToString("f") }).ToList();
+            AgreementList = new ObservableCollection<Agreement>();
+            var manager = new DataManager();
+            foreach (var agree in manager.GetAgrees())
+            {
+                AgreementList.Add(new Agreement(agree));
+            }
         }
 
     }

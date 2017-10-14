@@ -20,12 +20,12 @@ namespace Zarodolgozat
     public partial class ClientView : Window
     {
         //readonly MainViewModel _vm;
-        MainViewModel _vm;
+        ClientViewModel _vm;
 
         public ClientView()
         {
             InitializeComponent();
-            _vm = new MainViewModel();
+            _vm = new ClientViewModel();
             DataContext = _vm;
         }
 
@@ -48,7 +48,14 @@ namespace Zarodolgozat
             {
                 ClientFormViewModel vm = new ClientFormViewModel(_vm.SelectClient);
                 ClientFormWindow clientForm = new ClientFormWindow { DataContext = vm };
-                clientForm.lastNameTextBox.IsEnabled = false; //TODO
+                clientForm.lastNameTextBox.IsEnabled = false;
+                clientForm.firstNameTextBox.IsEnabled = false;
+                clientForm.birthNameTextBox.IsEnabled = false;
+                clientForm.ssnTextBox.IsEnabled = false;
+                clientForm.birthPlaceTextBox.IsEnabled = false;
+                clientForm.birthDateTextBox.IsEnabled = false;
+                clientForm.mothersBirthLastNameTextBox.IsEnabled = false;
+                clientForm.mothersBirthFirstNameTextBox.IsEnabled = false;
                 clientForm.ShowDialog();
 
             }

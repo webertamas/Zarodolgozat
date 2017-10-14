@@ -56,6 +56,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Agreement.cs" />
+    <Compile Include="AgreementFormWindow.xaml.cs">
+      <DependentUpon>AgreementFormWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AgreementViewModel.cs" />
     <Compile Include="AgreementWindow.xaml.cs">
       <DependentUpon>AgreementWindow.xaml</DependentUpon>
@@ -74,11 +77,18 @@
     <Compile Include="CompanyFormWindow.xaml.cs">
       <DependentUpon>CompanyFormWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DailyLogView.xaml.cs">
+      <DependentUpon>DailyLogView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DailyLogViewModel.cs" />
     <Compile Include="LoginViewModel.cs" />
-    <Compile Include="MainViewModel.cs" />
+    <Compile Include="ClientViewModel.cs" />
     <Compile Include="Statistics.cs" />
     <Compile Include="User.cs" />
+    <Page Include="AgreementFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AgreementWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -92,6 +102,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CompanyFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DailyLogView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

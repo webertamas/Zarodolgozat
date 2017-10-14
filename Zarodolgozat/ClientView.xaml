@@ -23,6 +23,7 @@
         <Button Content="Új kliens" HorizontalAlignment="Left" Height="20" Margin="21,285,0,0" VerticalAlignment="Top" Width="84" Click="AddButton_Click"/>
         <Button Content="Módosítás" HorizontalAlignment="Left" Margin="127,285,0,0" VerticalAlignment="Top" Width="75" Click="EditButton_Click"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="236,285,0,0" VerticalAlignment="Top" Width="75"/>
+        <DataGrid SelectedItem="{Binding SelectClient}" ItemsSource="{Binding ClientList}" HorizontalAlignment="Left" Height="249" Margin="292,10,0,0" VerticalAlignment="Top" Width="241"/>
 
     </Grid>
 </Window>

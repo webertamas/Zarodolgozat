@@ -28,24 +28,22 @@ namespace Zarodolgozat
         string _paNumber;
 
         public int Id { get; set; }
-        public string FirstName { get { return _firstName; } set { _firstName = value; OnPropertyCange(); } }
-        public string LastName { get { return _lastName; } set { _lastName = value; OnPropertyCange(); } }
-        public string BirthName { get { return _birthName; } set { _birthName = value; OnPropertyCange(); } }
-        //TODO
-        public DateTime BirthDate { get { return _birthDate; } set { _birthDate = value; OnPropertyCange(); } }
-
-        public string BirthPlace { get { return _birthPlace; } set { _birthPlace = value; OnPropertyCange(); } }
-        public int SSN { get { return _ssn; } set { _ssn = value; OnPropertyCange(); } }
-        public string MothersFirstName { get { return _mothersFirstName; } set { _mothersFirstName = value; OnPropertyCange(); } }
-        public string MothersLastName { get { return _mothersLastName; } set { _mothersLastName = value; OnPropertyCange(); } }
-        public int HAZIPCode { get { return _haZIPCode; } set { _haZIPCode = value; OnPropertyCange(); } }
-        public string HALocality { get { return _haLocality; } set { _haLocality = value; OnPropertyCange(); } }
-        public string HAStreet { get { return _haStreet; } set { _haStreet = value; OnPropertyCange(); } }
-        public string HANumber { get { return _haNumber; } set { _haNumber = value; OnPropertyCange(); } }
-        public int PAZIPCode { get { return _paZIPCode; } set { _paZIPCode = value; OnPropertyCange(); } }
-        public string PALocality { get { return _paLocality; } set { _paLocality = value; OnPropertyCange(); } }
-        public string PAStreet { get { return _paStreet; } set { _paStreet = value; OnPropertyCange(); } }
-        public string PANumber { get { return _paNumber; } set { _paNumber = value; OnPropertyCange(); } }
+        public string FirstName { get { return _firstName; } set { _firstName = value; OnPropertyChange(); } }
+        public string LastName { get { return _lastName; } set { _lastName = value; OnPropertyChange(); } }
+        public string BirthName { get { return _birthName; } set { _birthName = value; OnPropertyChange(); } }
+        public DateTime BirthDate { get { return _birthDate; } set { _birthDate = value; OnPropertyChange(); } }
+        public string BirthPlace { get { return _birthPlace; } set { _birthPlace = value; OnPropertyChange(); } }
+        public int SSN { get { return _ssn; } set { _ssn = value; OnPropertyChange(); } }
+        public string MothersFirstName { get { return _mothersFirstName; } set { _mothersFirstName = value; OnPropertyChange(); } }
+        public string MothersLastName { get { return _mothersLastName; } set { _mothersLastName = value; OnPropertyChange(); } }
+        public int HAZIPCode { get { return _haZIPCode; } set { _haZIPCode = value; OnPropertyChange(); } }
+        public string HALocality { get { return _haLocality; } set { _haLocality = value; OnPropertyChange(); } }
+        public string HAStreet { get { return _haStreet; } set { _haStreet = value; OnPropertyChange(); } }
+        public string HANumber { get { return _haNumber; } set { _haNumber = value; OnPropertyChange(); } }
+        public int PAZIPCode { get { return _paZIPCode; } set { _paZIPCode = value; OnPropertyChange(); } }
+        public string PALocality { get { return _paLocality; } set { _paLocality = value; OnPropertyChange(); } }
+        public string PAStreet { get { return _paStreet; } set { _paStreet = value; OnPropertyChange(); } }
+        public string PANumber { get { return _paNumber; } set { _paNumber = value; OnPropertyChange(); } }
 
         public Client(ClientDbModel dbModel)
         {

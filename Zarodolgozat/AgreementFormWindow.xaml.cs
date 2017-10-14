@@ -15,15 +15,13 @@ using System.Windows.Shapes;
 namespace Zarodolgozat
 {
     /// <summary>
-    /// Interaction logic for DailyLogView.xaml
+    /// Interaction logic for AgreementFormWindow.xaml
     /// </summary>
-    public partial class DailyLogView : Window
+    public partial class AgreementFormWindow : Window
     {
-        public DailyLogView()
+        public AgreementFormWindow()
         {
             InitializeComponent();
-            AgreementViewModel _vm = new AgreementViewModel();
-            DataContext = _vm;
         }
     }
 }

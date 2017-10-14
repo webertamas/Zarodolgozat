@@ -8,30 +8,19 @@ using Zarodolgozat.Dal;
 
 namespace Zarodolgozat
 {
-    public class ClientViewModel:BaseModel
+    public class ClientViewModel : BaseModel
     {
-        DataManager context = new DataManager();
+        //public ObservableCollection<>
+        public User User { get; set; }
         public ObservableCollection<Client> ClientList { get; set; }
         public Client SelectClient { get; set; }
 
         public ClientViewModel()
         {
             ClientList = new ObservableCollection<Client>();
-            foreach (var client in context.GetClients())
-            {
-                ClientList.Add(new Client(client));
-            }
-        }
-
-        internal void RemoveClient()
-        {
-            context.RemoveClient(SelectClient.Id);
-            ClientList.Remove(SelectClient);
-        }
-
-        internal void RefreshList()
-        {
-            foreach (var client in context.GetClients())
+            //var ctx = new Context();
+            var manager = new DataManager();
+            foreach (var client in manager.GetClients())
             {
                 ClientList.Add(new Client(client));
             }

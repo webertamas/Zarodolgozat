@@ -12,8 +12,8 @@ namespace Zarodolgozat
         string _username;
         string _password;
 
-        public string Username { get { return _username; }set { _username = value;OnPropertyCange(); } }
-        public string Password { get { return _password; }set { _password = value;OnPropertyCange(); } }
+        public string Username { get { return _username; }set { _username = value;OnPropertyChange(); } }
+        public string Password { get { return _password; }set { _password = value;OnPropertyChange(); } }
 
         public User(UserDbModel dbModel)
         {

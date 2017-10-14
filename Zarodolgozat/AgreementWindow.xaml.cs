@@ -26,7 +26,7 @@ namespace Zarodolgozat
         public AgreementWindow()
         {
             InitializeComponent();
-            MainViewModel _vm = new MainViewModel();
+            ClientViewModel _vm = new ClientViewModel();
             DataContext = _vm;
         }
     }

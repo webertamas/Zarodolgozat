@@ -7,15 +7,11 @@
         mc:Ignorable="d"
         Title="AgreementWindow" Height="300" Width="567.097">
     <Grid>
-        <ListBox SelectedItem="{Binding SelectClient}" ItemsSource="{Binding ClientList}" HorizontalAlignment="Left" Height="249" Margin="10,10,0,0" VerticalAlignment="Top" Width="260">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <Label Content="{Binding FirstName}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
- 
+        <DataGrid ItemsSource="{Binding AgreementList}" HorizontalAlignment="Left" Height="205" Margin="10,24,0,0" VerticalAlignment="Top" Width="220" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="test1" Binding="{Binding StartDate}" />
+                <DataGridTextColumn Header="test2" Binding="{Binding Client.FirstName}" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

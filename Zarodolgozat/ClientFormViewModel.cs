@@ -30,7 +30,26 @@ namespace Zarodolgozat
 
         public bool ClientValidate()
         {
-            return !string.IsNullOrEmpty(Client.BirthName);  //TODO
+            return !string.IsNullOrEmpty(Client.FirstName)
+                && !string.IsNullOrEmpty(Client.LastName)
+                && !string.IsNullOrEmpty(Client.BirthName)
+                && Client.SSN!=0
+                && Client.SSN<1000000000
+                && Client.BirthDate!=null
+                && !string.IsNullOrEmpty(Client.BirthPlace)
+                && !string.IsNullOrEmpty(Client.MothersFirstName)
+                && !string.IsNullOrEmpty(Client.MothersLastName)
+                //&& Client.HAZIPCode != 0
+                //&& Client.HAZIPCode < 10000
+                //&& !string.IsNullOrEmpty(Client.HALocality)
+                //&& !string.IsNullOrEmpty(Client.HAStreet)
+                //&& !string.IsNullOrEmpty(Client.HANumber)
+                //&& Client.PAZIPCode!=0
+                //&& Client.PAZIPCode <10000
+                //&& !string.IsNullOrEmpty(Client.PALocality)
+                //&& !string.IsNullOrEmpty(Client.PAStreet)
+                //&& !string.IsNullOrEmpty(Client.PANumber)  //TODO uncomment
+;
         }
 
         public void Save()

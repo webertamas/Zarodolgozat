@@ -14,7 +14,8 @@ namespace Zarodolgozat.Dal
         public UserDbModel User { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public ICollection<ClientDbModel> Clients { get; set; }
+        //public IEnumerable<ClientDbModel> Clients { get; set; }
+        [Key]
         public ClientDbModel Client { get; set; }
     }
 }

@@ -20,7 +20,7 @@ namespace Zarodolgozat
     /// </summary>
     public partial class MainWindow : Window
     {
-        readonly MainViewModel _vm;
+        readonly ClientViewModel _vm;
 
         public MainWindow()
         {
@@ -28,7 +28,7 @@ namespace Zarodolgozat
             //logInView.ShowDialog();
             InitializeComponent();
 
-            _vm = new MainViewModel
+            _vm = new ClientViewModel
             {
                 //User = logInView.ViewModel.AuthenticatedUser
                 User=new User { Username="asdf", Password="asdf"}
@@ -70,6 +70,12 @@ namespace Zarodolgozat
         {
             ClientView clientview = new ClientView();
             clientview.ShowDialog();
+        }
+
+        private void DailyLogButton_Click(object sender, RoutedEventArgs e)
+        {
+            DailyLogView dlview = new DailyLogView();
+            dlview.ShowDialog();
         }
     }
 }

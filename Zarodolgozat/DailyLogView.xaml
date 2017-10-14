@@ -5,16 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zarodolgozat"
         mc:Ignorable="d"
-        Title="Napló" Height="300" Width="650.299">
-    <Window.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="#FFFFC500" Offset="0"/>
-            <GradientStop Color="White" Offset="1"/>
-        </LinearGradientBrush>
-    </Window.Background>
+        Title="DailyLogView" Height="300" Width="802.716">
     <Grid>
-        <DataGrid x:Name="dataGrid" ItemsSource="{Binding Agreements}" HorizontalAlignment="Left" Height="218" Margin="10,28,0,0" VerticalAlignment="Top" Width="308"/>
-        <DatePicker HorizontalAlignment="Left" Height="108" Margin="366,43,0,0" VerticalAlignment="Top" Width="151"/>
+        <DataGrid HorizontalAlignment="Left" Height="205" Margin="19,40,0,0" VerticalAlignment="Top" Width="220" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding StartDate}" />
+                <DataGridTextColumn Header="Mass" Binding="{Binding Client.FirstName}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <!--<DataGrid ItemsSource="{Binding AgreementList}" HorizontalAlignment="Left" Height="205" Margin="296,40,0,0" VerticalAlignment="Top" Width="431"/>-->
+        <DataGrid ItemsSource="{Binding AgreementList}" HorizontalAlignment="Left" Height="205" Margin="383,40,0,0" VerticalAlignment="Top" Width="220" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="test1" Binding="{Binding StartDate}" />
+                <DataGridTextColumn Header="test2" Binding="{Binding Client.FirstName}" />
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Window>
