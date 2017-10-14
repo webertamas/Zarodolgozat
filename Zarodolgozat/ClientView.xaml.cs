@@ -35,9 +35,10 @@ namespace Zarodolgozat
             ClientFormWindow clientForm = new ClientFormWindow { DataContext = vm };
             clientForm.ShowDialog();
             var clientList = _vm.ClientList;
-            if (clientForm.DialogResult==true)
+            if (clientForm.DialogResult == true)
             {
                 clientList.Add(vm.Client);
+                vm.Save();
             }
         }
 

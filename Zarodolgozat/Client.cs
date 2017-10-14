@@ -7,7 +7,7 @@ using Zarodolgozat.Dal;
 
 namespace Zarodolgozat
 {
-    public class Client:BaseModel
+    public class Client : BaseModel
     {
 
         string _firstName;
@@ -27,10 +27,10 @@ namespace Zarodolgozat
         string _paStreet;
         string _paNumber;
 
-
+        public int Id { get; set; }
         public string FirstName { get { return _firstName; } set { _firstName = value; OnPropertyCange(); } }
-        public string LastName { get { return _lastName; }set { _lastName = value; OnPropertyCange(); } }
-        public string BirthName { get { return _birthName; } set { _birthName = value;OnPropertyCange(); } }
+        public string LastName { get { return _lastName; } set { _lastName = value; OnPropertyCange(); } }
+        public string BirthName { get { return _birthName; } set { _birthName = value; OnPropertyCange(); } }
         //TODO
         public DateTime BirthDate { get { return _birthDate; } set { _birthDate = value; OnPropertyCange(); } }
 
@@ -49,6 +49,7 @@ namespace Zarodolgozat
 
         public Client(ClientDbModel dbModel)
         {
+            Id = dbModel.Id;
             FirstName = dbModel.FirstName;
             LastName = dbModel.LastName;
             BirthName = dbModel.BirthName;

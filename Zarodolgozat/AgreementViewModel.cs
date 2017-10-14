@@ -15,7 +15,7 @@ namespace Zarodolgozat
         public AgreementViewModel(Client client)
         {
             var ctx = new Context();
-            Agreements = ctx.Agreements.Where(x => x.Client.BirthName == client.BirthName).Select(x => new Agreement { StartDate = x.StartDate.ToString("f") }).ToList();
+            //Agreements = ctx.Agreements.Where(x => x.Client.BirthName == client.BirthName).Select(x => new Agreement { StartDate = x.StartDate.ToString("f") }).ToList();
         }
 
     }

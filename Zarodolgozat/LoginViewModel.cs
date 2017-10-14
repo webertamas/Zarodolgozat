@@ -15,16 +15,12 @@ namespace Zarodolgozat
 
         public bool Login()
         {
-            var ctx = new Context();
-            foreach (var user in ctx.Users)
-            {
-                if (user.Username == Username && user.Password == Password)
-                {
-                    AuthenticatedUser = new User(user);
-                    return true;
-                }
-            }
-            return false;
+            var manager = new DataManager();
+            var user = manager.GetUser(Username, Password);
+            if (user == null)
+                return false;
+            AuthenticatedUser = new User(user);
+            return true;
         }
     }
 }

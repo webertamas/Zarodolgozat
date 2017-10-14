@@ -32,17 +32,9 @@ namespace Zarodolgozat
                 MessageBox.Show("Hiba!", "Hiba!", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
+            DialogResult = true;
+            //clientVM.Save();
             Close();
-        }
-
-        private void DatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var datepicker = sender as DatePicker;
-            DateTime? date = datepicker.SelectedDate;
-            if (date!=null)
-            {
-                Title = date.Value.ToShortDateString();
-            }
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

@@ -18,8 +18,9 @@ namespace Zarodolgozat
         public MainViewModel()
         {
             ClientList = new ObservableCollection<Client>();
-            var ctx = new Context();
-            foreach (var client in ctx.Clients)
+            //var ctx = new Context();
+            var manager = new DataManager();
+            foreach (var client in manager.GetClients())
             {
                 ClientList.Add(new Client(client));
             }
