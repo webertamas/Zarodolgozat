@@ -13,7 +13,8 @@ namespace Zarodolgozat
     public class AgreementViewModel:BaseModel
     {
         public ObservableCollection<Agreement> AgreementList { get; set; }
-        
+        public Agreement SelectAgreement { get; set; }
+        public ObservableCollection<Client> ClientList { get; set; }
         public Client SelectClient { get; set; }
 
         public AgreementViewModel()
@@ -24,6 +25,12 @@ namespace Zarodolgozat
             {
                 AgreementList.Add(new Agreement(agree));
             }
+            ClientList = new ObservableCollection<Client>();
+            foreach (var client in manager.GetClients())
+            {
+                ClientList.Add(new Client(client));
+            }
+
         }
 
     }

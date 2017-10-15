@@ -10,8 +10,40 @@ namespace Zarodolgozat
 {
     public class DailyLogViewModel:BaseModel
     {
+        DateTime _chosenDate;
+        public ObservableCollection<Agreement> AgreementList { get; set; }
+
+        public DateTime ChosenDate
+        {
+            get { return _chosenDate; }
+            set
+            {
+                _chosenDate = value; OnPropertyChange("ChosenDate"); OnPropertyChange("FilteredAgreements");
+            }
+        }
+
+        public IEnumerable<Agreement> FilteredAgreements
+        {
+            get
+            { 
+                return AgreementList.Where(x => x.StartDate <= ChosenDate).Where(x => x.EndDate >= ChosenDate);
+            }
+        }
 
 
+
+
+        public DailyLogViewModel()
+        {
+  AgreementList = new ObservableCollection<Agreement>();
+            var manager = new DataManager();
+            foreach (var agree in manager.GetAgrees())
+            {
+                AgreementList.Add(new Agreement(agree));
+            }
+
+
+        }
     }
 }
 

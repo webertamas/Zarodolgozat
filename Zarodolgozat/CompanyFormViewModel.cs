@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Zarodolgozat.Dal;
 
 namespace Zarodolgozat
 {
@@ -10,6 +11,9 @@ namespace Zarodolgozat
     {
         public Company Company { get; set; }
         public bool IsNew { get; set; }
+
+        DataManager ctx = new DataManager();
+        Context _ctx = new Context();
 
         Company company;
         public CompanyFormViewModel(Company Company)
@@ -34,9 +38,25 @@ namespace Zarodolgozat
 
         public void Save()
         {
-            if (!IsNew)
+            //if (IsNew)
+            //{
+            //    company = new Company
+            //    {
+            //        CompanyName = Company.CompanyName,
+            //        HQZIPCode = Company.HQZIPCode,
+            //        HQLocality = Company.HQLocality,
+            //        HQStreet = Company.HQStreet,
+            //        HQNumber = Company.HQNumber,
+            //        SiteName = Company.SiteName,
+            //        SiteZIPCode = Company.SiteZIPCode,
+            //        SiteLocality = Company.SiteLocality,
+            //        SiteStreet = Company.SiteStreet,
+            //        SiteNumber = Company.SiteNumber
+            //    };
+            //}
+            if (IsNew)
             {
-                company = new Company
+                ctx.AddCompanies (new CompanyDbModel
                 {
                     CompanyName = Company.CompanyName,
                     HQZIPCode = Company.HQZIPCode,
@@ -48,7 +68,8 @@ namespace Zarodolgozat
                     SiteLocality = Company.SiteLocality,
                     SiteStreet = Company.SiteStreet,
                     SiteNumber = Company.SiteNumber
-                };
+                }
+                    );
             }
         }
 
@@ -56,18 +77,5 @@ namespace Zarodolgozat
         {
             Company.CompanyName = company.CompanyName;
         }
-
-        //public void SaveP()
-        //{
-        //    if (!IsNew)
-        //        product = new Product { Name = Product.Name, Price = Product.Price, Quantity = Product.Quantity };
-        //}
-
-        //public void OriginalValueP()
-        //{
-        //    Product.Name = product.Name;
-        //    Product.Price = product.Price;
-        //    Product.Quantity = product.Quantity;
-        //}
     }
 }

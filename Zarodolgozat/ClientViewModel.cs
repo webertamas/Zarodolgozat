@@ -10,7 +10,6 @@ namespace Zarodolgozat
 {
     public class ClientViewModel : BaseModel
     {
-        //public ObservableCollection<>
         public User User { get; set; }
         public ObservableCollection<Client> ClientList { get; set; }
         public Client SelectClient { get; set; }

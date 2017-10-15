@@ -15,19 +15,25 @@ using System.Windows.Shapes;
 namespace Zarodolgozat
 {
     /// <summary>
-    /// Interaction logic for CompanyFormView.xaml
+    /// Interaction logic for AgreementFormWindow.xaml
     /// </summary>
-    public partial class CompanyFormView : Window
+    public partial class AgreementFormView : Window
     {
-        public CompanyFormView()
+        AgreementFormViewModel _vm;
+
+        public AgreementFormView()
         {
             InitializeComponent();
+            _vm = new AgreementFormViewModel();
+            DataContext = _vm;
+            DataGrid.ItemsSource = _vm.ClientList.ToList();
         }
 
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
-            var companyVM = (CompanyFormViewModel)DataContext;
-            if (!companyVM.CompanyValidate())
+            var agreementFVM = (AgreementFormViewModel)DataContext;
+            
+            if (!agreementFVM.AgreementValidate())
             {
                 MessageBox.Show("Hiba!", "Hiba!", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
@@ -40,5 +46,5 @@ namespace Zarodolgozat
         {
             DialogResult = true;
         }
-    }    
+    }
 }

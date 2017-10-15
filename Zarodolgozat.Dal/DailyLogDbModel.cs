@@ -11,5 +11,7 @@ namespace Zarodolgozat.Dal
     {
         [Key]
         public int Id { get; set; }
+        public AgreementDbModel Agreement { get; set; }
+        public bool Use { get; set; }
     }
 }

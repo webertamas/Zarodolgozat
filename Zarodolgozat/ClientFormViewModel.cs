@@ -12,8 +12,6 @@ namespace Zarodolgozat
         public Client Client { get; set; }
         public bool IsNew { get; set; }
 
-        Client client;
-
         DataManager ctx = new DataManager();
         Context _ctx = new Context();
 
@@ -39,13 +37,13 @@ namespace Zarodolgozat
                 && !string.IsNullOrEmpty(Client.BirthPlace)
                 && !string.IsNullOrEmpty(Client.MothersFirstName)
                 && !string.IsNullOrEmpty(Client.MothersLastName)
-                //&& Client.HAZIPCode != 0
-                //&& Client.HAZIPCode < 10000
+                && Client.HAZIPCode != 0
+                && Client.HAZIPCode < 10000
                 //&& !string.IsNullOrEmpty(Client.HALocality)
                 //&& !string.IsNullOrEmpty(Client.HAStreet)
                 //&& !string.IsNullOrEmpty(Client.HANumber)
-                //&& Client.PAZIPCode!=0
-                //&& Client.PAZIPCode <10000
+                && Client.PAZIPCode != 0
+                && Client.PAZIPCode < 10000
                 //&& !string.IsNullOrEmpty(Client.PALocality)
                 //&& !string.IsNullOrEmpty(Client.PAStreet)
                 //&& !string.IsNullOrEmpty(Client.PANumber)  //TODO uncomment

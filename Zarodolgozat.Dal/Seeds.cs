@@ -64,8 +64,8 @@ namespace Zarodolgozat.Dal
             {
                 new AgreementDbModel
                 {
-                    StartDate=DateTime.Now,
-                    EndDate=DateTime.Now,
+                    StartDate=DateTime.Parse("2017/10/01"),
+                    EndDate=DateTime.Parse("2018/01/01"),
                     Client =(ClientDbModel)Clients[0]
                 }
             };

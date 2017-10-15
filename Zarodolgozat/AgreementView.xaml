@@ -7,11 +7,13 @@
         mc:Ignorable="d"
         Title="AgreementWindow" Height="300" Width="567.097">
     <Grid>
-        <DataGrid ItemsSource="{Binding AgreementList}" HorizontalAlignment="Left" Height="205" Margin="10,24,0,0" VerticalAlignment="Top" Width="220" AutoGenerateColumns="False">
+        <DataGrid ItemsSource="{Binding AgreementList}" SelectedItem="{Binding SelectAgreement}" HorizontalAlignment="Left" Height="205" Margin="10,24,0,0" VerticalAlignment="Top" Width="220" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="test1" Binding="{Binding StartDate}" />
                 <DataGridTextColumn Header="test2" Binding="{Binding Client.FirstName}" />
             </DataGrid.Columns>
         </DataGrid>
+        <Button Content="Új megállapodás" HorizontalAlignment="Left" Height="27" Margin="288,51,0,0" VerticalAlignment="Top" Width="86" Click="AddButton_Click"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="40" Margin="296,111,0,0" VerticalAlignment="Top" Width="118" Click="EditButton_Click"/>
     </Grid>
 </Window>

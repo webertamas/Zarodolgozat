@@ -14,5 +14,6 @@ namespace Zarodolgozat.Dal
         public virtual DbSet<ClientDbModel> Clients { get; set; }
         public virtual DbSet<AgreementDbModel> Agreements { get; set; }
         public virtual DbSet<DailyLogDbModel> DailyLogs { get; set; }
+        public virtual DbSet<CompanyDbModel> Companies { get; set; }
     }
 }

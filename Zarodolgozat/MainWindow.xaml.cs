@@ -77,5 +77,11 @@ namespace Zarodolgozat
             DailyLogView dlview = new DailyLogView();
             dlview.ShowDialog();
         }
+
+        private void CompanyButton_Click(object sender, RoutedEventArgs e)
+        {
+            CompanyFormView cmpview = new CompanyFormView();
+            cmpview.ShowDialog();
+        }
     }
 }

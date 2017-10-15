@@ -7,19 +7,15 @@
         mc:Ignorable="d"
         Title="DailyLogView" Height="300" Width="802.716">
     <Grid>
-        <DataGrid HorizontalAlignment="Left" Height="205" Margin="19,40,0,0" VerticalAlignment="Top" Width="220" AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Binding="{Binding StartDate}" />
-                <DataGridTextColumn Header="Mass" Binding="{Binding Client.FirstName}" />
-            </DataGrid.Columns>
-        </DataGrid>
         <!--<DataGrid ItemsSource="{Binding AgreementList}" HorizontalAlignment="Left" Height="205" Margin="296,40,0,0" VerticalAlignment="Top" Width="431"/>-->
-        <DataGrid ItemsSource="{Binding AgreementList}" HorizontalAlignment="Left" Height="205" Margin="383,40,0,0" VerticalAlignment="Top" Width="220" AutoGenerateColumns="False">
+        <DataGrid ItemsSource="{Binding FilteredAgreements}" HorizontalAlignment="Left" Height="205" Margin="20,37,0,0" VerticalAlignment="Top" Width="220">
+        </DataGrid>
+        <DatePicker SelectedDate="{Binding ChosenDate,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="61" Margin="302,38,0,0" VerticalAlignment="Top" Width="181"/>
+        <DataGrid ItemsSource="{Binding AgreementList}" HorizontalAlignment="Left" Height="205" Margin="565,40,0,0" VerticalAlignment="Top" Width="220" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="test1" Binding="{Binding StartDate}" />
                 <DataGridTextColumn Header="test2" Binding="{Binding Client.FirstName}" />
             </DataGrid.Columns>
         </DataGrid>
-
     </Grid>
 </Window>

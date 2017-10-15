@@ -62,9 +62,26 @@ namespace Zarodolgozat.Dal
         }
         public IEnumerable<AgreementDbModel> GetAgrees()
         {
-            return _seeds.Agreements; //.OrderBy(x => x.Client.BirthName);// .OrderBy(x => x.StartDate);
+            return _seeds.Agreements;
         }
 
         
+        public void AddAgrees(AgreementDbModel agree)
+        {
+            using (ctx=new Context())
+            {
+                ctx.Agreements.Add(agree);
+                ctx.SaveChanges();
+            }
+        }
+
+        public void AddCompanies(CompanyDbModel company)
+        {
+            using (ctx = new Context())
+            {
+                ctx.Companies.Add(company);
+                ctx.SaveChanges();
+            }
+        }
     }
 }

@@ -9,13 +9,17 @@ namespace Zarodolgozat
 {
     public class Agreement:BaseModel
     {
+        
         DateTime _startDate { get; set; }
         DateTime _endDate { get; set; }
 
+        public int Id { get; set; }
         public DateTime StartDate { get { return _startDate; } set { _startDate = value; OnPropertyChange(); } }
         public DateTime EndDate { get { return _endDate; } set { _endDate = value; OnPropertyChange(); } }
 
         ClientDbModel _client;
+       
+
 
         public ClientDbModel Client
         {
@@ -29,6 +33,11 @@ namespace Zarodolgozat
             StartDate = dbModel.StartDate;
             EndDate = dbModel.EndDate;
             Client = dbModel.Client;
+            
+        }
+        public Agreement()
+        {
+
         }
     }
 }

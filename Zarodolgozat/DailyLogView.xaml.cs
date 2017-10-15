@@ -19,10 +19,11 @@ namespace Zarodolgozat
     /// </summary>
     public partial class DailyLogView : Window
     {
+        DailyLogViewModel _vm;
         public DailyLogView()
         {
             InitializeComponent();
-            AgreementViewModel _vm = new AgreementViewModel();
+            DailyLogViewModel _vm = new DailyLogViewModel();
             DataContext = _vm;
         }
     }

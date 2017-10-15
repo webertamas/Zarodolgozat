@@ -19,7 +19,6 @@ namespace Zarodolgozat
     /// </summary>
     public partial class ClientView : Window
     {
-        //readonly MainViewModel _vm;
         ClientViewModel _vm;
 
         public ClientView()

@@ -13,7 +13,7 @@
         <Button Content="Napló" HorizontalAlignment="Left" Height="23" Margin="21,224,0,0" VerticalAlignment="Top" Width="120" Click="DailyLogButton_Click"/>
         <Button Content="Riportok" HorizontalAlignment="Left" Height="23" Margin="21,252,0,0" VerticalAlignment="Top" Width="120"/>
         <Button Content="Törzsadatok" HorizontalAlignment="Left" Height="23" Margin="21,280,0,0" VerticalAlignment="Top" Width="120" Click="ClientsButton_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="23" Margin="21,308,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Intézmények" HorizontalAlignment="Left" Height="23" Margin="21,308,0,0" VerticalAlignment="Top" Width="120" Click="CompanyButton_Click"/>
         <Button Content="Button" HorizontalAlignment="Left" Height="23" Margin="21,336,0,0" VerticalAlignment="Top" Width="120"/>
         <Button Content="Button" HorizontalAlignment="Left" Height="23" Margin="21,364,0,0" VerticalAlignment="Top" Width="120"/>
         <Button Content="Kijelentkezés" HorizontalAlignment="Left" Height="23" Margin="21,392,0,0" VerticalAlignment="Top" Width="120" Click="LogoutButton_click"/>
