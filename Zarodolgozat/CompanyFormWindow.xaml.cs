@@ -19,9 +19,13 @@ namespace Zarodolgozat
     /// </summary>
     public partial class CompanyFormView : Window
     {
+        CompanyFormViewModel _vm;
+
         public CompanyFormView()
         {
             InitializeComponent();
+            _vm = new CompanyFormViewModel(new Company());
+            DataContext = _vm;
         }
 
         private void SubmitButton_Click(object sender, RoutedEventArgs e)

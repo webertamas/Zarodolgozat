@@ -9,13 +9,14 @@ namespace Zarodolgozat
 {
     class CompanyFormViewModel:BaseModel
     {
+
         public Company Company { get; set; }
         public bool IsNew { get; set; }
 
         DataManager ctx = new DataManager();
         Context _ctx = new Context();
 
-        Company company;
+        //Company company;
         public CompanyFormViewModel(Company Company)
         {
             this.Company = Company;
@@ -73,9 +74,9 @@ namespace Zarodolgozat
             }
         }
 
-        public void OriginalValue()
-        {
-            Company.CompanyName = company.CompanyName;
-        }
+        //public void OriginalValue()
+        //{
+        //    Company.CompanyName = company.CompanyName;
+        //}
     }
 }

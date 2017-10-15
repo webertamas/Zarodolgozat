@@ -79,9 +79,14 @@ namespace Zarodolgozat
         }
 
         private void CompanyButton_Click(object sender, RoutedEventArgs e)
-        {
-            CompanyFormView cmpview = new CompanyFormView();
-            cmpview.ShowDialog();
+        {    
+            if (MessageBox.Show("A program jelenleg csak offline üzemmódban működik, ezért az Intézmények funkció csak korlátozottan működik",
+                "Figyelem!", MessageBoxButton.OK, MessageBoxImage.Information)==MessageBoxResult.OK)
+            {
+                CompanyFormView cmpview = new CompanyFormView();
+                cmpview.ShowDialog();
+            }
+
         }
     }
 }
