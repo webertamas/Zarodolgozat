@@ -9,16 +9,9 @@ namespace Zarodolgozat
 {
     public class DailyLog:BaseModel
     {
-        bool _use { get; set; }
         AgreementDbModel _agreement { get; set; }
 
         public int Id { get; set; }
-
-        public bool Use
-        {
-            get { return _use; }
-            set { _use = value; OnPropertyChange(); }
-        }
 
         public AgreementDbModel Agreement
         {
@@ -28,7 +21,6 @@ namespace Zarodolgozat
 
         public DailyLog(DailyLogDbModel dbModel)
         {
-            Use = dbModel.Use;
             Agreement = dbModel.Agreement;
         }
 

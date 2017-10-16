@@ -44,19 +44,32 @@ namespace Zarodolgozat.Dal
                 HALocality ="Budapest",
                 HAStreet ="Jászberényi út",
                 HANumber ="47/E"
+            },
+            new ClientDbModel
+            {
+                FirstName ="Ferenc",
+                LastName ="Szabó",
+                BirthName ="Szabó Ferenc",
+                BirthPlace ="Aszód",
+                BirthDate = DateTime.Parse("1972/11/14"),
+                MothersLastName ="Mária",
+                MothersFirstName ="Balogh",
+                SSN =886644330,
+                HAZIPCode =1106,
+                HALocality ="Budapest",
+                HAStreet ="Jászberényi út",
+                HANumber ="47/E",
+                PAZIPCode =1134,
+                PALocality ="Budapest",
+                PAStreet ="Dózsa György út",
+                PANumber ="152"
             }
+
+
         };
         public List<CompanyDbModel> Companies { get; } = new List<CompanyDbModel>();
 
         public List<AgreementDbModel> Agreements { get; } = new List<AgreementDbModel>();
-
-        //public List<AgreementDbModel> Agreements { get; } = new List<AgreementDbModel>
-        //{
-        //    new AgreementDbModel
-        //    {
-        //        Clients=new List<ClientDbModel> {Clients[0] }
-        //    }
-        //};
 
         public Seeds()
         {
@@ -67,11 +80,15 @@ namespace Zarodolgozat.Dal
                     StartDate=DateTime.Parse("2017/10/01"),
                     EndDate=DateTime.Parse("2018/01/01"),
                     Client =(ClientDbModel)Clients[0]
+                },
+                new AgreementDbModel
+                {
+                    StartDate=DateTime.Parse("2017/01/01"),
+                    EndDate=DateTime.Parse("2018/01/01"),
+                    Client =(ClientDbModel)Clients[1]
                 }
             };
-            Console.WriteLine("m");
-
         }
-        
+
     }
 }

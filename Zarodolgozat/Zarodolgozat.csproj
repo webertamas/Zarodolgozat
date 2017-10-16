@@ -108,7 +108,6 @@
     <Compile Include="DailyLogViewModel.cs" />
     <Compile Include="LoginViewModel.cs" />
     <Compile Include="ClientViewModel.cs" />
-    <Compile Include="Statistics.cs" />
     <Compile Include="User.cs" />
     <Page Include="AgreementFormView.xaml">
       <SubType>Designer</SubType>
@@ -172,6 +171,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

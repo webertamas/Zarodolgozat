@@ -31,23 +31,23 @@ namespace Zarodolgozat
             return !string.IsNullOrEmpty(Client.FirstName)
                 && !string.IsNullOrEmpty(Client.LastName)
                 && !string.IsNullOrEmpty(Client.BirthName)
-                && Client.SSN!=0
-                && Client.SSN<1000000000
-                && Client.BirthDate!=null
+                && Client.SSN != 0
+                && Client.SSN < 1000000000
+                && Client.BirthDate != null
                 && !string.IsNullOrEmpty(Client.BirthPlace)
                 && !string.IsNullOrEmpty(Client.MothersFirstName)
                 && !string.IsNullOrEmpty(Client.MothersLastName)
                 && Client.HAZIPCode != 0
+                && Client.HAZIPCode >= 1000
                 && Client.HAZIPCode < 10000
-                //&& !string.IsNullOrEmpty(Client.HALocality)
-                //&& !string.IsNullOrEmpty(Client.HAStreet)
-                //&& !string.IsNullOrEmpty(Client.HANumber)
-                && Client.PAZIPCode != 0
-                && Client.PAZIPCode < 10000
-                //&& !string.IsNullOrEmpty(Client.PALocality)
-                //&& !string.IsNullOrEmpty(Client.PAStreet)
-                //&& !string.IsNullOrEmpty(Client.PANumber)  //TODO uncomment
-;
+                && !string.IsNullOrEmpty(Client.HALocality)
+                && !string.IsNullOrEmpty(Client.HAStreet)
+                && !string.IsNullOrEmpty(Client.HANumber)
+                && (Client.PAZIPCode == 0 ||
+                ((Client.PAZIPCode >= 1000 && Client.PAZIPCode < 10000)
+                && !string.IsNullOrEmpty(Client.PALocality)
+                && !string.IsNullOrEmpty(Client.PAStreet)
+                && !string.IsNullOrEmpty(Client.PANumber)));
         }
 
         public void Save()

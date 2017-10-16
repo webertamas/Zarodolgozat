@@ -12,15 +12,16 @@ namespace Zarodolgozat
     {
         public Agreement Agreement { get; set; }
         public ObservableCollection<Client> ClientList { get; set; }
+        //public ObservableCollection<Agreement> ClientsWithoutAgreements { get; set; }
         public Client SelectClient { get; set; }
         public bool IsNew { get; set; }
 
         DataManager ctx = new DataManager();
         Context _ctx = new Context();
 
-    
 
-    public AgreementFormViewModel(Agreement Agreement)
+
+        public AgreementFormViewModel(Agreement Agreement)
         {
             this.Agreement = Agreement;
             if (IsNew)
@@ -31,7 +32,8 @@ namespace Zarodolgozat
 
         public bool AgreementValidate()
         {
-            return true; //TODO
+            return Agreement.StartDate != null
+                && Agreement.EndDate != null;
         }
 
 
@@ -42,7 +44,6 @@ namespace Zarodolgozat
                 ctx.AddAgrees(new AgreementDbModel
                 {
                     Client = Agreement.Client,
-                    //Client = SelectClient,               
                     StartDate = Agreement.StartDate,
                     EndDate = Agreement.EndDate
                 }
@@ -60,7 +61,5 @@ namespace Zarodolgozat
                 ClientList.Add(new Client(client));
             }
         }
-
-
-}
+    }
 }

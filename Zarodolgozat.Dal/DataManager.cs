@@ -65,6 +65,8 @@ namespace Zarodolgozat.Dal
             return _seeds.Agreements;
         }
 
+
+
         
         public void AddAgrees(AgreementDbModel agree)
         {
@@ -74,6 +76,9 @@ namespace Zarodolgozat.Dal
                 ctx.SaveChanges();
             }
         }
+
+
+
 
         public void AddCompanies(CompanyDbModel company)
         {

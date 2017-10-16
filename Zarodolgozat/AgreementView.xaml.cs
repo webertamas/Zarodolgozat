@@ -48,7 +48,7 @@ namespace Zarodolgozat
             {
                 AgreementFormViewModel vm = new AgreementFormViewModel(_vm.SelectAgreement) { IsNew = false };
                 AgreementFormView agreementForm = new AgreementFormView { DataContext = vm };
-                //TODO
+                agreementForm.DataGrid.IsEnabled = false;
 
                 agreementForm.ShowDialog();
             }

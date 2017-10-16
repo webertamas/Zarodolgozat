@@ -5,17 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zarodolgozat"
         mc:Ignorable="d"
-        Title="DailyLogView" Height="300" Width="802.716">
+        Title="Napló" Height="450" Width="399.268">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="White" Offset="1"/>
+            <GradientStop Color="#FFD8CF00"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
-        <!--<DataGrid ItemsSource="{Binding AgreementList}" HorizontalAlignment="Left" Height="205" Margin="296,40,0,0" VerticalAlignment="Top" Width="431"/>-->
-        <DataGrid ItemsSource="{Binding FilteredAgreements}" HorizontalAlignment="Left" Height="205" Margin="20,37,0,0" VerticalAlignment="Top" Width="220">
-        </DataGrid>
-        <DatePicker SelectedDate="{Binding ChosenDate,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="61" Margin="302,38,0,0" VerticalAlignment="Top" Width="181"/>
-        <DataGrid ItemsSource="{Binding AgreementList}" HorizontalAlignment="Left" Height="205" Margin="565,40,0,0" VerticalAlignment="Top" Width="220" AutoGenerateColumns="False">
+        <DataGrid ItemsSource="{Binding FilteredAgreements}" HorizontalAlignment="Left" Height="205" Margin="10,106,0,0"
+                  VerticalAlignment="Top" Width="371" AutoGenerateColumns="False" SelectionUnit="FullRow"
+                  AlternatingRowBackground="Gainsboro"  AlternationCount="2">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="test1" Binding="{Binding StartDate}" />
-                <DataGridTextColumn Header="test2" Binding="{Binding Client.FirstName}" />
-            </DataGrid.Columns>
+                <DataGridTextColumn Header="Vezetéknév" Binding="{Binding Client.LastName}" />
+                <DataGridTextColumn Header="Keresztnév" Binding="{Binding Client.FirstName}" />
+                <DataGridTextColumn Header="TAJ azonosító" Binding="{Binding Client.SSN}" />
+            </DataGrid.Columns>       
         </DataGrid>
+        <DatePicker SelectedDate="{Binding ChosenDate,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="61" Margin="81,26,0,0" VerticalAlignment="Top" Width="239"/>
     </Grid>
 </Window>

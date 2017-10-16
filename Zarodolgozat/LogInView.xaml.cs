@@ -59,13 +59,7 @@ namespace Zarodolgozat
 
         private void OnClosing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            e.Cancel = ViewModel.AuthenticatedUser == null; //Environment.Exit(1);
-            //MessageBoxResult result = MessageBox.Show("Biztos hogy ki akar lépni?", "Exit", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            //if (result == MessageBoxResult.Yes)
-            //{
-            //    e.Cancel = ViewModel.AuthenticatedUser == null;
-            //    Environment.Exit(1);
-            //}
+            e.Cancel = ViewModel.AuthenticatedUser == null;
         }
     }
 }

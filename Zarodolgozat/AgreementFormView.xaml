@@ -8,8 +8,8 @@
         Title="AgreementFormWindow" Height="300" Width="876.724" Closing="Window_Closing">
     <Grid>
         <DataGrid x:Name="DataGrid" SelectedItem="{Binding SelectClient}" ItemsSource="{Binding ClientList}" HorizontalAlignment="Left" Height="201" Margin="19,25,0,0" VerticalAlignment="Top" Width="505"/>
-        <DatePicker  HorizontalAlignment="Left" Height="64" Margin="568,37,0,0" VerticalAlignment="Top" Width="165" SelectedDate="{Binding Agreement.StartDate}"/>
-        <DatePicker HorizontalAlignment="Left" Height="76" Margin="568,140,0,0" VerticalAlignment="Top" Width="165" SelectedDate="{Binding Agreement.EndDate}"/>
+        <DatePicker x:Name="datePicker1" HorizontalAlignment="Left" Height="64" Margin="568,37,0,0" VerticalAlignment="Top" Width="165" SelectedDate="{Binding Agreement.StartDate,StringFormat='yyyy.MM.dd'}"/>
+        <DatePicker x:Name="datePicker2" HorizontalAlignment="Left" Height="76" Margin="568,140,0,0" VerticalAlignment="Top" Width="165" SelectedDate="{Binding Agreement.EndDate,StringFormat='yyyy.MM.dd'}"/>
         <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="56" Margin="768,160,0,0" VerticalAlignment="Top" Width="73" Click="SubmitButton_Click"/>
 
     </Grid>

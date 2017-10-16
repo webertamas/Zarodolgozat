@@ -10,9 +10,11 @@ namespace Zarodolgozat
 {
     public class DailyLogViewModel:BaseModel
     {
-        DateTime _chosenDate;
         public ObservableCollection<Agreement> AgreementList { get; set; }
 
+
+        DateTime _chosenDate;
+        
         public DateTime ChosenDate
         {
             get { return _chosenDate; }
@@ -29,10 +31,7 @@ namespace Zarodolgozat
                 return AgreementList.Where(x => x.StartDate <= ChosenDate).Where(x => x.EndDate >= ChosenDate);
             }
         }
-
-
-
-
+        
         public DailyLogViewModel()
         {
   AgreementList = new ObservableCollection<Agreement>();

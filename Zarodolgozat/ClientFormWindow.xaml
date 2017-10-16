@@ -5,24 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zarodolgozat"
         mc:Ignorable="d"
-        Title="ClientFormWindow" Height="580" Width="966" Closing="Window_Closing">
+        Title="Törzsadatok" Height="580" Width="966" Closing="Window_Closing">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="White" Offset="1"/>
+            <GradientStop Color="#FFD8CF00"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         <Label Content="Vezetéknév:&#xD;&#xA;" HorizontalAlignment="Left" Margin="4,81,0,0" VerticalAlignment="Top" Width="151" Height="26" FontWeight="Bold"/>
         <Label Content="Születési név:" HorizontalAlignment="Left" Margin="4,121,0,0" VerticalAlignment="Top" Width="151" FontWeight="Bold"/>
         <Label Content="Születési hely:" HorizontalAlignment="Left" Margin="4,161,0,0" VerticalAlignment="Top" Width="151" FontWeight="Bold"/>
-        <Label Content="Anyja születési vezetéknév:" HorizontalAlignment="Left" Margin="4,201,0,0" VerticalAlignment="Top" Width="160" FontWeight="Bold"/>
+        <Label Content="Anyja születési vezetéknév:" HorizontalAlignment="Left" Margin="4,201,0,0" VerticalAlignment="Top" Width="174" FontWeight="Bold"/>
         <Label Content="Állandó magyar lakhelye" HorizontalAlignment="Left" Margin="4,261,0,0" VerticalAlignment="Top" Width="315" FontWeight="Bold" FontSize="16" FontStyle="Italic"/>
         <Label Content="Utónév:" HorizontalAlignment="Left" Margin="481,81,0,0" VerticalAlignment="Top" Width="156" FontWeight="Bold"/>
         <Label Content="TAJ azonosító:" HorizontalAlignment="Left" Margin="481,121,0,0" VerticalAlignment="Top" Width="156" FontWeight="Bold"/>
         <Label Content="Születési idő:" HorizontalAlignment="Left" Margin="481,161,0,0" VerticalAlignment="Top" Width="156" FontWeight="Bold"/>
         <Label Content="Anyja születési utónév:" HorizontalAlignment="Left" Margin="481,201,0,0" VerticalAlignment="Top" Width="156" FontWeight="Bold"/>
-        <TextBox x:Name="lastNameTextBox" HorizontalAlignment="Left" Height="26" Margin="164,81,0,0" TextWrapping="Wrap" Text="{Binding Client.LastName}" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="237"/>
+        <TextBox x:Name="lastNameTextBox" HorizontalAlignment="Left" Height="26" Margin="183,81,0,0" TextWrapping="Wrap" Text="{Binding Client.LastName}" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="237"/>
         <TextBox x:Name="firstNameTextBox" HorizontalAlignment="Left" Height="26" Margin="642,81,0,0" TextWrapping="Wrap" Text="{Binding Client.FirstName}" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="227"/>
-        <TextBox x:Name="birthNameTextBox" HorizontalAlignment="Left" Height="26" Margin="164,121,0,0" TextWrapping="Wrap" Text="{Binding Client.BirthName}" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="237"/>
+        <TextBox x:Name="birthNameTextBox" HorizontalAlignment="Left" Height="26" Margin="183,121,0,0" TextWrapping="Wrap" Text="{Binding Client.BirthName}" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="237"/>
         <TextBox x:Name="ssnTextBox" HorizontalAlignment="Left" Height="26" Margin="642,121,0,0" TextWrapping="Wrap" Text="{Binding Client.SSN}" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="227"/>
-        <TextBox x:Name="birthPlaceTextBox" HorizontalAlignment="Left" Height="26" Margin="164,161,0,0" TextWrapping="Wrap" Text="{Binding Client.BirthPlace}" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="237"/>
+        <TextBox x:Name="birthPlaceTextBox" HorizontalAlignment="Left" Height="26" Margin="183,161,0,0" TextWrapping="Wrap" Text="{Binding Client.BirthPlace}" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="237"/>
         <DatePicker x:Name="birthDateTextBox"  HorizontalAlignment="Left" Height="26" Margin="642,161,0,0" VerticalAlignment="Top" Width="227"  SelectedDate="{Binding Client.BirthDate}" FirstDayOfWeek="Monday"/>
-        <TextBox x:Name="mothersBirthLastNameTextBox" HorizontalAlignment="Left" Height="26" Margin="164,201,0,0" TextWrapping="Wrap" Text="{Binding Client.MothersFirstName}" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="237"/>
+        <TextBox x:Name="mothersBirthLastNameTextBox" HorizontalAlignment="Left" Height="26" Margin="183,201,0,0" TextWrapping="Wrap" Text="{Binding Client.MothersFirstName}" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="237"/>
         <TextBox x:Name="mothersBirthFirstNameTextBox" HorizontalAlignment="Left" Height="26" Margin="642,201,0,0" TextWrapping="Wrap" Text="{Binding Client.MothersLastName}" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="227"/>
         <Label Content="Irányítószám:" HorizontalAlignment="Left" Height="25" Margin="4,321,0,0" VerticalAlignment="Top" Width="88" FontWeight="Bold"/>
         <TextBox HorizontalAlignment="Left" Height="26" Margin="97,321,0,0" TextWrapping="Wrap" Text="{Binding Client.HAZIPCode,UpdateSourceTrigger=PropertyChanged}" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="61"/>

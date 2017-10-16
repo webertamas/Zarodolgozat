@@ -5,7 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zarodolgozat"
         mc:Ignorable="d"
-        Title="CompanyFormView" Height="370.69" Width="568.103" Closing="Window_Closing">
+        Title="Intézmény" Height="370.69" Width="568.103" Closing="Window_Closing">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="White" Offset="1"/>
+            <GradientStop Color="#FFD8CF00"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         <Label Content="Fenntartó Intézmény:" HorizontalAlignment="Left" Margin="4,24,0,0" VerticalAlignment="Top" Width="315" FontWeight="Bold" FontSize="16" FontStyle="Italic" Height="32"/>
         <Label Content="Irányítószám:" HorizontalAlignment="Left" Height="26" Margin="4,86,0,0" VerticalAlignment="Top" Width="88" FontWeight="Bold"/>
